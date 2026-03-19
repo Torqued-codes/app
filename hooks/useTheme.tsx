@@ -45,7 +45,7 @@ const lightColors: ColorScheme = {
   gradients: {
     background: ["#f8fafc", "#e2e8f0"],
     surface: ["#ffffff", "#f8fafc"],
-    primary: ["#3b82f6", "#1d4ed8"],
+    primary: ["#3b82f6", "#1d4ed8"], // the color goes from light to other light blue in gradient types
     success: ["#10b981", "#059669"],
     warning: ["#f59e0b", "#d97706"],
     danger: ["#ef4444", "#dc2626"],
@@ -60,7 +60,7 @@ const lightColors: ColorScheme = {
 };
 
 const darkColors: ColorScheme = {
-  bg: "#0f172a",
+  bg: "blue",
   surface: "#1e293b",
   text: "#f1f5f9",
   textMuted: "#94a3b8",
@@ -71,7 +71,7 @@ const darkColors: ColorScheme = {
   danger: "#f87171",
   shadow: "#000000",
   gradients: {
-    background: ["#0f172a", "#1e293b"],
+    background: ["#0f172a", "blue"],
     surface: ["#1e293b", "#334155"],
     primary: ["#3b82f6", "#1d4ed8"],
     success: ["#10b981", "#059669"],
