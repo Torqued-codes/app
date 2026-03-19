@@ -4,9 +4,8 @@ import { Link } from "expo-router";
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.content}>Torq</Text>
-      <Text>TORQ</Text>
-      <Link href="/about">Hello</Link>
+      <Text style={styles.content}>TORQ</Text>
+      <Text>HI</Text>
     </View>
   );
 }
