@@ -73,11 +73,11 @@ const darkColors: ColorScheme = {
   gradients: {
     background: ["#0f172a", "blue"],
     surface: ["#1e293b", "#334155"],
-    primary: ["#3b82f6", "#1d4ed8"],
+    primary: ["aqua", "#0546f9"],
     success: ["#10b981", "#059669"],
     warning: ["#f59e0b", "#d97706"],
     danger: ["#ef4444", "#dc2626"],
-    muted: ["#374151", "#4b5563"],
+    muted: ["rgb(3, 199, 248)","rgba(105, 8, 233, 0.4)37, 0, 85, 0.4)"],
     empty: ["#374151", "#4b5563"],
   },
   backgrounds: {

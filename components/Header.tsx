@@ -10,7 +10,7 @@ const Header = () => {
 
     const {colors} = useTheme();
     const homeStyles = createHomeStyles(colors);
-    const todos = useQuery(api.todos.getTodos);
+    const todos = useQuery(api.todos.getTodos);  // the no of tasks added r done via this
 
     const completedCount = todos ? todos.filter((todo) => todo.isCompleted).length :0;
     const totalCount = todos ? todos.length : 0;
@@ -21,11 +21,11 @@ const Header = () => {
         <View style={homeStyles.header}>
             <View style={homeStyles.titleContainer}>
                 <LinearGradient colors={colors.gradients.primary} style={homeStyles.iconContainer}>
-                    <Ionicons name="flash-off-outline" size={29} color="aqua" />
+                    <Ionicons name="flash-outline" size={29} color="aqua" />
                 </LinearGradient>
             
             <View style={homeStyles.titleTextContainer}>
-                <Text style={homeStyles.title}>Blockchain&apos; Tasks</Text>
+                <Text style={homeStyles.title}>Blockchain Tasks</Text>
                 <Text style={homeStyles.subtitle}>{completedCount} of {totalCount} completed </Text>
             </View>
             </View>
