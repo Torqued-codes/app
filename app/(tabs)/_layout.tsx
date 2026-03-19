@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router'
-import useTheme from "@/hooks/useTheme"
+import { useTheme } from "@/hooks/useTheme"
 import { Ionicons } from '@expo/vector-icons'
 
 const TabsLayout = () => {
@@ -9,7 +9,7 @@ const TabsLayout = () => {
             tabBarActiveTintColor:"aqua",
             tabBarInactiveTintColor:"brown",
             tabBarStyle:{
-                backgroundColor:"yellow",
+                backgroundColor:colors.border,
                 borderTopWidth:1,
                 borderTopColor:"white",
                 height:90,

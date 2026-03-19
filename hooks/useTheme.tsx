@@ -64,7 +64,7 @@ const darkColors: ColorScheme = {
   surface: "#1e293b",
   text: "#f1f5f9",
   textMuted: "#94a3b8",
-  border: "#334155",
+  border: "yellow",
   primary: "#60a5fa",
   success: "#34d399",
   warning: "#fbbf24",
@@ -126,3 +126,5 @@ export const useTheme = () => {
   }
   return context;
 };
+
+export default useTheme
