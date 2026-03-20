@@ -179,3 +179,12 @@ export default function Index() {
     </LinearGradient>
   );
 }
+
+
+
+
+
+
+
+
+// flatview is used so that v can add as many todo cards v want
