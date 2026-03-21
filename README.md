@@ -5,7 +5,28 @@ A full-stack, real-time Todo app built with **Expo** and **Convex** — featurin
  
 ## 📱 Screenshots
 
- 
+
+### Todo's Page
+
+<img width="1084" height="2310" alt="Screenshot_20260321-215349" src="https://github.com/user-attachments/assets/5d89f7ea-035a-4697-81c5-3e5da23f7078" />
+
+### Todo's Page
+
+<img width="1084" height="2311" alt="Screenshot_20260321-215430 (1)" src="https://github.com/user-attachments/assets/395ac548-655b-48a8-969d-a43b124b6cc5" />
+
+### Todo's Completed
+
+<img width="1084" height="2307" alt="Screenshot_20260321-215521" src="https://github.com/user-attachments/assets/035f8bf9-42f6-4781-a0a2-4b89e6333ea0" />
+
+### Todo's Status
+
+<img width="1084" height="2310" alt="Screenshot_20260321-215527" src="https://github.com/user-attachments/assets/91221534-087e-4491-973b-85631eb513df" />
+
+### Settings Page
+
+<img width="1084" height="2313" alt="Screenshot_20260321-215538" src="https://github.com/user-attachments/assets/68e2cf3f-3957-4937-bc57-5aaabde434ff" />
+
+
 ## ✨ Features
  
 - ➕ **Add** unlimited todos instantly
@@ -34,56 +55,35 @@ A full-stack, real-time Todo app built with **Expo** and **Convex** — featurin
 - Node.js
 - Expo Go app on your phone
  
-### Installation
+## Installation
  
-# Clone the repo
+### Clone the repo
 git clone https://github.com/torqued-codes/torqapp.git
  
-# Navigate into the project
+### Navigate into the project
 cd torqapp
  
-# Install dependencies
+### Install dependencies
 npm install
  
-# Start the app
+### Start the app
 npx expo start
  
-### Convex Setup
+## Convex Setup
 
-# Install Convex
+### Install Convex
 npm install convex
  
-# Initialize Convex
+### Initialize Convex
 npx convex dev
 
- 
-## 📁 Project Structure
- 
-
-app/
-├── (tabs)/
-│   ├── index.tsx        # Home screen (Todos)
-│   └── settings.tsx     # Settings screen
-├── _layout.tsx          # Root layout
-components/
-├── Header.tsx
-├── TodoInput.tsx
-├── EmptyState.tsx
-├── LoadingSpinner.tsx
-├── DangerZone.tsx
-├── Preferences.tsx
-└── ProgressStats.tsx
-hooks/
-└── useTheme.tsx         # Dark/Light mode
-convex/
-└── todos.ts             # Backend functions
 
 ## 🌐 Web Deployment
 
-# Build for web
+### Build for web
 npx expo export --platform web
  
-# Deploy to Vercel
+### Deploy to Vercel
 vercel deploy dist/
 
  
