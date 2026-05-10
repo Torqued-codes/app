@@ -1,0 +1,6 @@
+.expo/
+node_modules/
+.npm-cache/
+npm-debug.log*
+backend/.env
+backend/node_modules/
