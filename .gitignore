@@ -1,6 +1,9 @@
 .expo/
+.env
 node_modules/
 .npm-cache/
 npm-debug.log*
 backend/.env
+backend/firebase-service-account.json
+*firebase-adminsdk*.json
 backend/node_modules/

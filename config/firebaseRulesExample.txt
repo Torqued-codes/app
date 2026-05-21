@@ -1,0 +1,53 @@
+// Firestore Security Rules Example
+// Copy this to your Firebase Console > Firestore Database > Rules
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Users Collection
+    match /users/{userId} {
+      allow read, write: if request.auth.uid == userId;
+      allow read: if request.auth != null && resource.data.role != 'admin';
+    }
+    
+    // Vendors Collection
+    match /vendors/{vendorId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+    }
+    
+    // Vendor Addresses Collection (sub-collection of vendors)
+    match /vendors/{vendorId}/addresses/{addressId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth.uid == get(/databases/$(database)/documents/vendors/$(vendorId)).data.userId;
+    }
+    
+    // Admin Applications (pending vendor approvals)
+    match /admin/vendorApplications/{appId} {
+      allow read: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    // Products Collection
+    match /products/{productId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'vendor';
+    }
+    
+    // Orders Collection
+    match /orders/{orderId} {
+      allow read, write: if request.auth.uid == resource.data.userId || 
+                           request.auth.uid == resource.data.vendorId ||
+                           get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+    }
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
